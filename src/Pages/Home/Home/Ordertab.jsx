@@ -3,7 +3,7 @@ import Menudata from './Menudata';
 
 const Ordertab = ({items}) => {
     return (
-        <div>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ml-10 lg:ml-0'>
           {
             items.map(item => 
                     <Menudata

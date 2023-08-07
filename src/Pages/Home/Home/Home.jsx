@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Ordertab from './Ordertab';
 import useMenu from '../../../hooks/useMenu';
+import Header from '../../Shared/Header';
 const Home = () => {
     const categories = ['Rangamati','CoxsBazar','Sylhet','Bandarban'];
     const category = 'Rangamati';
@@ -17,6 +18,8 @@ const Home = () => {
     const Bandarban = menu.filter(item => item.stop_destination === 'Bandarban');
     return (
         <div>
+            <Header></Header>
+            <div>
             <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
             <TabList>
                 <Tab>Rangamati</Tab>
@@ -37,6 +40,7 @@ const Home = () => {
             <Ordertab items={Bandarban}></Ordertab>
             </TabPanel>
             </Tabs>
+        </div>
         </div>
     );
 };
