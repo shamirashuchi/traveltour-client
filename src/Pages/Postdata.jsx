@@ -1,6 +1,7 @@
 import React from 'react';
 import Swal from 'sweetalert2'
 import Header from './Shared/Header';
+import Footer from './Footer';
 const Postdata = () => {
     const handleAddPost = event =>{
         event.preventDefault();
@@ -11,8 +12,8 @@ const Postdata = () => {
         const image = form.image.value;
         const duration = form.duration.value;
         const Details = form.Details.value;
-        const newCommunity = {start_destination,cost,stop_destination,image,duration,Details};
-        console.log(newCommunity);
+        const newpost = {start_destination,cost,stop_destination,image,duration,Details};
+        console.log(newpost);
         //send data to the server
         fetch('http://localhost:2000/item',{
 
@@ -20,7 +21,7 @@ const Postdata = () => {
          headers:{
             'content-type':'application/json'
          },
-         body:JSON.stringify(newCommunity)
+         body:JSON.stringify(newpost)
         })
         //client side receive the response or result
         .then(res => res.json())
@@ -40,7 +41,7 @@ const Postdata = () => {
         <div>
             <Header></Header>
             <div className="bg-[#F4F3F0] p-24">
-            <h2 className="text-3xl font-extrabold">Add Community</h2>
+            <h2 className="text-3xl font-extrabold">Add Post</h2>
             <form onSubmit={handleAddPost}>
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
@@ -105,6 +106,7 @@ const Postdata = () => {
                 <input type="submit" value="Post" className="btn btn-block bg-primary hover:bg-blue-950 text-white"/>
             </form>
         </div>
+        <Footer></Footer>
         </div>
     );
 };

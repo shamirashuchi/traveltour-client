@@ -4,12 +4,16 @@ import 'react-tabs/style/react-tabs.css';
 import Ordertab from './Ordertab';
 import useMenu from '../../../hooks/useMenu';
 import Header from '../../Shared/Header';
+import useCommunity from '../../../hooks/useCommunity';
+import Communitydata from '../../Communitydata';
+import Footer from '../../Footer';
 const Home = () => {
     const categories = ['Rangamati','CoxsBazar','Sylhet','Bandarban'];
     const category = 'Rangamati';
     const initialIndex = categories.indexOf(category);
     const [tabIndex,setTabIndex] = useState(initialIndex);
     const [menu] = useMenu();
+    const [community] = useCommunity();
     
 
     const Rangamati = menu.filter(item => item.stop_destination === 'Rangamati');
@@ -41,6 +45,20 @@ const Home = () => {
             </TabPanel>
             </Tabs>
         </div>
+       <div>
+        <h2 className='text-center text-4xl mt-6 mb-2 text-primary'>Join Different Communities</h2>
+       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ml-10 lg:ml-0 mb-10'>
+          {
+            community.map(item => 
+                    <Communitydata
+                key={item._id}
+                item={item}
+            ></Communitydata>
+            )
+          }
+        </div>
+       </div>
+       <Footer></Footer>
         </div>
     );
 };
