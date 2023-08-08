@@ -40,7 +40,7 @@ const Communitydata = ({item}) => {
     <div>
         <img className='h-80 w-96'  src={image} alt="" />
         <h2>{community} Community</h2>
-        <div className='ml-5 lg:ml-0'>
+        <div className='ml-5 lg:ml-10'>
         <button onClick={() => handleadduser(item,data)} className="btn btn-warning w-72 h-1">Join</button>
         </div>
     </div>
