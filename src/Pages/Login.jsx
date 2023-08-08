@@ -34,7 +34,7 @@ const Login = () => {
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center md:w-1/2 lg:text-left">
                 <h1 className="text-5xl font-bold">Login now!</h1>
-                <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                <p className="py-6">Embark on a journey of discovery as you explore new horizons and create lasting memories. Whether you're drawn to serene beaches, majestic mountains, or vibrant cities, let your wanderlust guide you to new experiences and cultures. Uncover hidden gems, savor local flavors, and embrace the thrill of the unknown. Your next adventure awaits!</p>
                 </div>
                 <div className="card lg:w-1/3 max-w-sm shadow-2xl bg-base-100">
                 <form onSubmit={handleLogin} className="card-body">

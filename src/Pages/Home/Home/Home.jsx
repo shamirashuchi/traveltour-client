@@ -47,7 +47,7 @@ const Home = () => {
         </div>
        <div>
         <h2 className='text-center text-4xl mt-6 mb-2 text-primary'>Join Different Communities</h2>
-       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ml-10 lg:ml-0 mb-10'>
+       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  lg:ml-0 mb-10'>
           {
             community.map(item => 
                     <Communitydata

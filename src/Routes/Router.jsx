@@ -8,6 +8,7 @@ import Login from "../Pages/Login";
 import Signup from "../Pages/Signup";
 import Postdata from "../Pages/Postdata";
 import AddCommunitydata from "../Pages/AddCommunitydata";
+import Requested from "../Pages/Requested";
   export const router = createBrowserRouter([
     {
       path: "/",
@@ -36,6 +37,10 @@ import AddCommunitydata from "../Pages/AddCommunitydata";
         {
           path:"/add_community",
           element:<AddCommunitydata></AddCommunitydata>
+        },
+        {
+          path:"/req",
+          element:<Requested></Requested>
         }
       ]
     },
